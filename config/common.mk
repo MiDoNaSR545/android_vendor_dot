@@ -53,6 +53,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/dot/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
 
+# Flipendo
+PRODUCT_COPY_FILES += \
+    vendor/dot/config/permissions/pixel_experience_2020.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2020.xml
+
 # Copy all Dot-specific init rc files
 $(foreach f,$(wildcard vendor/dot/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM)/etc/init/$(notdir $f)))
