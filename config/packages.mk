@@ -76,6 +76,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 # Dot Packages
 PRODUCT_PACKAGES += \
     Customizations \
-    SystemUpdates
+    SystemUpdates \
+    StitchImage
 
 include vendor/dot/config/overlay.mk
