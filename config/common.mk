@@ -35,6 +35,14 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
+ifeq ($(WITH_OPLAUNCHER), true)
+include vendor/extras/extras.mk
+endif
+
+ifeq ($(WITH_OPADDONS), true)
+include vendor/addons/oneplus/apps/config.mk
+endif
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/dot/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
